@@ -387,7 +387,7 @@ This documentation provides an overview of the Course API, which is used to mana
   ```
 
 
-**1. Get Paid Courses by Tag (`GET /get_user_courses_by_tag/<int:tag_id>`)**
+### Get Paid Courses by Tag (`GET /get_user_courses_by_tag/<int:tag_id>`)
 
 * **Route:** `/get_user_courses_by_tag/<int:tag_id>`
 * **Method:** GET
@@ -401,7 +401,7 @@ This documentation provides an overview of the Course API, which is used to mana
         * 401 Unauthorized: If authentication fails.
         * 404 Not Found: If the specified tag is not found.
 
-**2. Upload Course Content (`POST /upload-course-content/`)**
+### Upload Course Content (`POST /upload-course-content/`)
 
 * **Route:** `/upload-course-content/`
 * **Method:** POST
@@ -434,7 +434,7 @@ This documentation provides an overview of the Course API, which is used to mana
 
 
 
-**3. Get Course Content (`GET /<int:course_id>/content/`)**
+### Get Course Content (`GET /<int:course_id>/content/`) 
 
 * **Route:** `/<int:course_id>/content/`
 * **Method:** GET
@@ -446,7 +446,7 @@ This documentation provides an overview of the Course API, which is used to mana
     * Response Body: An array of serialized `CourseContent` objects containing details about the course content for the provided course ID.
     * Error Codes:
         * 401 Unauthorized: If authentication fails.
-        * 404 Not Found: If the specified course is not found.
+        * 404 Not Found: If the specified course is not found. 
 
 ### User Course Content Settings
 
