@@ -1,0 +1,25 @@
+# API Documentation for Nanocodes Website
+
+## Usage
+
+- [announcement](./announcement.md)
+- [chatgpt](./chatgpt.md)
+- [contact](./contact.md)
+- [courses](./courses.md)
+- [faq](./faq.md)
+- [gallery](./gallery.md)
+- [newsletter](./newsletter.md)
+- [notification](./notification.md)
+- [onlineclass](./onlineclass.md)
+- [payment](./payment.md)
+- [profiles](./profiles.md)
+- [projects](./projects.md)
+- [promo](./promo.md)
+- [review](./review.md)
+- [service](./service.md)
+- [student](./student.md)
+- [teams](./teams.md)
+- [testimonial](./testimonial.md)
+- [timetable](./timetable.md)
+- [tutor](./tutor.md)
+- [users](./users.md)
