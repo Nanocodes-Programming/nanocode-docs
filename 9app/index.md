@@ -3,3 +3,4 @@
 ## Usage
 
 - [Authentication](./authentication.md)
+- [Wallet](./wallets.md)
