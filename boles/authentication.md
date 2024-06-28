@@ -288,3 +288,57 @@
   "entity": null
 }
 ```
+
+---
+
+## 8. Edit profile
+
+**Endpoint:** `/accounts/profile/edit/`  
+**Method:** `POST`  
+**Permissions:** IsAdmin
+
+**Description:** Edits the user and businesss profile of the super admin
+
+### Request Body:
+```json
+{
+  "name": "Kyrian dev",
+  "email": "codebee345@outlook.com",
+  "date_of_birth": "2024-06-28",
+  "address": "string",
+  "business_name": "Boles enterprise",
+  "business_address": "Address behind nowhere street 121",
+  "business_website": "www.boles.com",
+  "city": "Abuja",
+  "country": "Nigeria"
+}
+```
+The feilds of the request body above are completly optional, only provided fields will be updated
+
+### Responses:
+**200 OK:** Authentication successful; token or OTP sent based on 2FA status.
+```json
+{
+  "status": "success",
+  "entity": {
+    "name": "codebee",
+    "email": "codebee345@outlook.com",
+    "date_of_birth": "2024-06-28",
+    "address": "string",
+    "business_name": "Boles enterprise",
+    "business_address": "Address behind nowhere street 121",
+    "business_website": "www.boles.com",
+    "city": "Abuja",
+    "country": "Nigeria"
+  },
+  "message": "Profile updated successfully",
+  "success": true
+}
+```
+
+**403 Forbidden:** User permissions not qualified
+```json
+{
+  "detail": "You do not have permission to perform this action."
+}
+```
