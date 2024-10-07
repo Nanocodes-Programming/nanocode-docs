@@ -29,6 +29,7 @@
   "message": "Category created",
   "success": true
 }
+
 ```
 
 **400 Bad request:** Category name already exists
