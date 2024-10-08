@@ -85,7 +85,7 @@
 
 ## Create an offer
 
-An offer signals to the buyer that the user is interested in trading with them through a P2P transaction, this endpoint sends an email to the seller showcasing the buyers proposal 
+An offer signals to the seller that a buyer is interested in trading with them through a P2P transaction, this endpoint sends an email to the seller showcasing the buyers proposal 
 
 **Endpoint:** `/p2p/offer/create/`  
 **Method:** `POST`  
