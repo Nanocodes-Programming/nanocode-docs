@@ -218,7 +218,7 @@ This endpoint sends an email to the seller indicating a buyer has cancelled thei
 
 ## Release funds to buyer 
 
-This endpoint releases the funds (total_available) to the user, it sends an email to the user and also dispatches a websocket action which is recieived buy the buyer if they are logged in and connected to the p2p websocket route
+This endpoint releases the funds (total_available) to the buyer, it sends an email to the buyer and also dispatches a websocket action which is recieived buy the buyer if they are logged in and connected to the p2p websocket route
 
 **Endpoint:** `/p2p/offer/release/{id}/`  
 **Method:** `POST`  
@@ -276,7 +276,7 @@ You can only cancel a pending offer
 
 
 
-## Listening for when funds is released 
+## Listening for real time messages from the websocket
 
 When a seller releases the assets to a buyer, an email is sent to notify the buyesr of the completed transaction, a websocket action is also dispatched to the buyer if they are logged in and connected to the websocket 
 
@@ -296,8 +296,37 @@ When the funds is released, the buyer gets the following message through the web
 }
 ```
 
+When an offer is created for an ad, the following message is sent to the seller through websocket 
+
+```json 
+{
+    "message": "You have an interested buyer on your p2p ad",
+    "type": "ad_interest",
+    "ad_id": 2,
+    "offer_id": 12
+}
+```
 
 
+When an offer is cancelled by the buyer the following message is sent to the seller through websocket 
+
+```json 
+{
+    "message": "Kyrian has cancelled their offer regarding your P2P advertisement.",
+    "type": "offer_cancel",
+    "offer_id": 12
+}
+```
+
+When the buyer indicates payment on an offer, the following message is sent to the seller throught the websocket 
+
+```json 
+{
+    "message": "Kyrian has claimed to have made payment regarding your P2P advertisement.",
+    "type": "payment_indication",
+    "offer_id": 12
+}
+```
 
 
 
