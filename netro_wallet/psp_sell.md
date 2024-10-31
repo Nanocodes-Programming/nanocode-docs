@@ -1,7 +1,8 @@
-# P2p buy flow documentation 
+# P2p sell flow documentation 
 
+For this demonstration, lets assume `Jude` places a p2p sell ad and `Amara` creates an offer on the ad
 
-## Create a p2p ad 
+## Jude creates a p2p sell ad 
 **Endpoint:** `/p2p/ad/`  
 **Method:** `POST`  
 **Permissions:** IsAuthenticated  
@@ -21,16 +22,13 @@
   "terms_of_trade": "string",
   "additional_information": "string",
   "time_to_pay": 0,
-  "bank_account_name": "string",
-  "bank_account_number": "string",
-  "bank_name": "string"
 }
 ```
 
 ### Responses:
 **400 bad request:**
 
-Admin has restricted user from using usdt
+Admin has restricted Jude from using usdt
 ```json
 {
   "status": "failure",
@@ -50,7 +48,7 @@ User does not have enough assets in his p2p wallet
 }
 ```
 
-**200 ok:** Ad added successfully.
+**200 ok:** Ad created successfully.
 ```json
 {
   "status": "success",
@@ -61,8 +59,7 @@ User does not have enough assets in his p2p wallet
 ```
 
 
-
-## Get details of a p2p ad
+## Amara fetches and views details of Jude's p2p ad
 
 **Endpoint:** `/p2p/ad/detail/{id}`  
 **Method:** `GET`  
@@ -131,33 +128,23 @@ User does not have enough assets in his p2p wallet
   "message": null,
   "success": true
 }
-
-
-
-**401 unauthorized:**  User is not logged in.
-```json
- {
-  "detail": "Authentication credentials were not provided."
-}
 ```
 
-
-
-
-## Create an offer
-
-An offer signals to the seller that a buyer is interested in trading with them through a P2P transaction, this endpoint sends an email to the seller showcasing the buyers proposal 
+# Amara create an offer
+An offer signals to Jude that Amara want to sell crypto to him, it sends an email to Jude showcasing Amara's Proposal
 
 **Endpoint:** `/p2p/offer/create/`  
 **Method:** `POST`  
 **Permissions:** IsAuthenticated 
 
-## Request body 
 ## Request body:
 ```json
 {
   "currency_amount": "string",
   "fiat_amount": "string",
+  "bank_account_name": "string",
+  "bank_account_number": "string",
+  "bank_name": "string",
   "ad": 0
 }
 ```
@@ -182,7 +169,7 @@ An offer signals to the seller that a buyer is interested in trading with them t
 }
 ```
 
-**400 Bad reqeust:** An error occured as described by the message field.
+**400 Bad request:** An error occured as described by the message field.
 ```json 
 {
   "status": "failure",
@@ -193,11 +180,8 @@ An offer signals to the seller that a buyer is interested in trading with them t
 ```
 
 
-
-
-## Buyer indicate payment on an offer
-
-This endpoint sends an email to the seller indicating a buyer claims to have made payment 
+## Jude indicates payment on an offer
+This endpoint sends an email to Amara indicating Jude claims to have made payment
 
 **Endpoint:** `/p2p/offer/paid/{id}/`  
 **Method:** `POST`  
@@ -237,13 +221,8 @@ This endpoint sends an email to the seller indicating a buyer claims to have mad
 }
 ``` 
 
-
-
-
-
-## Cancel an offer
-
-This endpoint sends an email to the seller indicating a buyer has cancelled their interest and the ad is now open to new offers
+## Amara can cancel an offer
+This endpoint sends an email to Jude indicating Amaer has cancelled her interest and the ad is now open to new offers
 
 **Endpoint:** `/p2p/offer/cancel/{id}/`  
 **Method:** `POST`  
@@ -285,11 +264,9 @@ This endpoint sends an email to the seller indicating a buyer has cancelled thei
 
 
 
+## Jude Releases funds to Amara 
 
-
-## Release funds to buyer 
-
-This endpoint releases the funds (crypto_amount) to the buyer, it sends an email to the buyer and also dispatches a websocket action which is recieived buy the buyer if they are logged in and connected to the p2p websocket route
+This endpoint releases the funds (crypto_amount) to the Amara, it sends an email to the Amara and also dispatches a websocket action which is recieived buy Amara if she is logged in and connected to the p2p websocket route
 
 **Endpoint:** `/p2p/offer/release/{id}/`  
 **Method:** `POST`  
@@ -344,11 +321,7 @@ The logged in user is not the owner of the ad
 You can only cancel a pending offer
 
 
-
-
-
 ## Listening for real time messages from the websocket
-
 When a seller releases the assets to a buyer, an email is sent to notify the buyesr of the completed transaction, a websocket action is also dispatched to the buyer if they are logged in and connected to the websocket 
 
 
@@ -398,6 +371,3 @@ When the buyer indicates payment on an offer, the following message is sent to t
     "offer_id": 12
 }
 ```
-
-
-
