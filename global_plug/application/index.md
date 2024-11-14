@@ -2,4 +2,4 @@
 
 [Nigerian passport](./ngn_passport.md)
 
-[Ghanian passport](./ghana.md)
+[Ghanian passport](./ghana_passport.md)
