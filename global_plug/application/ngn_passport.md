@@ -61,9 +61,6 @@
 }
 ```
 
-### Choices 
-
-Fields that are restricted to specific values are listed below 
 
 ### Request Body Explanation
 Fields that are restricted to specific values are listed below:
