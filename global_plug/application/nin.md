@@ -19,7 +19,7 @@
   "gender": "male",
   "marital_status": "single",
   "date_of_birth": "2024-11-15",
-  "country_of_birth": "2024-11-15",
+  "country_of_birth": "string",
   "nationality": "string",
   "uk_city_address": "string",
   "town": "string",
