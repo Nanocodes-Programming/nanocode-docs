@@ -59,3 +59,18 @@ Fields that are restricted to specific values are listed below
 
 - **marital_status**:  
   `single, married, divorced, widowed, separated`
+
+
+## Required documents explained
+
+```
+To confirm your appointment, remember to bring one of the following proofs of ID:
+
+1.Nigerian Passport: Expired or Current
+2.For those without a Nigerian passport, bring the original birth certificate and Nigerian passport data page of either parent.
+
+If you've booked for an infant, bring:
+1.One (1) passport photograph with a grey background.
+2.Parent or guardian must provide their NIN for all minors.
+3.Ensure at least one parent/guardian accompanies the child during the appointment.
+```
