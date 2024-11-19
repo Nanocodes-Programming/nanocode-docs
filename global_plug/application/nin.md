@@ -1,4 +1,4 @@
-## Apply for a Nigerian passport
+## Apply for a Nigerian NIN
 
 **Endpoint:** `/nin/apply/`  
 **Method:** `POST`  
