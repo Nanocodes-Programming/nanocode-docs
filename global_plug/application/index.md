@@ -9,3 +9,8 @@
 [Canada visa](./canada_visa.md)
 
 [Shengen visa](./schengen_visa.md)
+
+[USA visa](./usa_visa.md)
+
+[NGN visa](./ngn_visa.md)
+
