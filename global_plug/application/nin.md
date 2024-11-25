@@ -115,3 +115,75 @@ If you've booked for an infant, bring:
   "height": "string",
 }
 ```
+
+
+## Get details of an Nin
+Ghana passport is divided into two For Adults and for minors
+
+**Endpoint:** `/nin/detail/{id}/`  
+**Method:** `GET`  
+**Permissions:** IsAuthenticated, IsAdmin
+
+**Sample response:** 
+
+```json
+{
+  "status": "success",
+  "data": {
+    "id": "f1fbcdd0-c767-4486-8a9f-8fcdddc83806",
+    "application": {
+      "id": "160efd2e-ed11-4018-b390-ace38648106a",
+      "created": "2024-11-22T15:30:56.118070Z",
+      "updated": "2024-11-22T15:30:56.149343Z",
+      "status": "pending",
+      "has_paid": false,
+      "application_type": "nin",
+      "country_application": "nigeria",
+      "tracking_id": "108722",
+      "created_account": true,
+      "completed_form": true,
+      "completed_payment": false,
+      "attended_appointment": false,
+      "uploaded_biometric_slip": false,
+      "received_document": false,
+      "reference_id": "f1fbcdd0-c767-4486-8a9f-8fcdddc83806",
+      "appointment_pack_tracking": null,
+      "document_tracking": null,
+      "user": "d413c189-923b-4843-862c-4eef0c0dba6b"
+    },
+    "email_address": "string",
+    "preferred_date_of_appointment": "2024-11-15",
+    "appointment_time": "00:00:00",
+    "bvn": "string",
+    "title": "miss",
+    "surname": "string",
+    "first_name": "string",
+    "middle_name": "string",
+    "gender": "male",
+    "marital_status": "single",
+    "date_of_birth": "2024-11-15",
+    "country_of_birth": "2024-11-15",
+    "nationality": "string",
+    "uk_city_address": "string",
+    "town": "string",
+    "borough": "string",
+    "address_line_one": "string",
+    "address_line_two": "string",
+    "post_code": "string",
+    "state_of_origin": "string",
+    "local_govt": "string",
+    "ngn_address_line_one": "string",
+    "ngn_address_line_two": "string",
+    "ngn_state": "string",
+    "town_of_origin": "string",
+    "phone_number": "string",
+    "height": "string",
+    "guardian_surname": null,
+    "guardian_firstname": null,
+    "guardian_nin": null
+  },
+  "message": "",
+  "success": true
+}
+```
+
