@@ -13,7 +13,7 @@ wss://sapi.saletick.net
    - `/chat/messages/<uid>/` (GET)
 
 2. **Get user threads**
-   - `/chat/get-user-threads/` (GET)
+   - `/chat/user/threads/` (GET)
 
 # Detailed endpoint documentation
 
