@@ -21,7 +21,7 @@ wss://sapi.saletick.net
 
 - **Endpoint**: `/chat/messages/<uid>/`
 - **Path Parameters**:
-  - `uuid` The id of the user whose conversation messages you want to create.
+  - `uuid` The id of the user whose conversation messages you want to fetch.
 - **Description:** This endpoints gets the messages in the conversation between the currently logged-in user and the user with the uid specified in the path parameter.
 
 - **Responses:**
