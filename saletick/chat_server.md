@@ -118,7 +118,7 @@ wss://sapi.saletick.net
 
 **3. Get user threads**
 
-- **Endpoint**: `/chat/get-user-threads/`
+- **Endpoint**: `/chat/user/threads/`
 - **Permissions:** isAuthenticated
 - **Description:** Gets the threads associated with the currently logged-in user. A thread basically respresents a conversation between two users.
 
